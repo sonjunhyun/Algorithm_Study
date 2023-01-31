@@ -6,6 +6,4 @@ def solution(letter):
     '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
     '-.--':'y','--..':'z'
 }
-    codes = letter.split()
-    decode = [morse[code] for code in codes]
-    return "".join(decode)
+    return "".join(map(lambda x: morse[x], letter.split()))
