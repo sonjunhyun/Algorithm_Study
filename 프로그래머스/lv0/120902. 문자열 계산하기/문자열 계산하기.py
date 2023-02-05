@@ -7,3 +7,7 @@ def solution(my_string):
         else:
             answer -= int(number_string[i+1])
     return answer
+
+#내장함수 eval 활용
+def solution(my_string):
+    return eval(my_string)
