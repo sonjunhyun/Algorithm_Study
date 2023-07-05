@@ -1,6 +1,10 @@
 def solution(array):
-    from collections import Counter
-    counter = Counter(array).most_common()
-    if len(counter) > 1:
-        return -1 if counter[0][1] == counter[1][1] else counter[0][0]
-    return counter[0][0]
+    num_count = 0
+    mode = 0
+    for i in set(array):
+        if array.count(i) > num_count:
+            num_count = array.count(i)
+            mode = i
+        elif array.count(i) == num_count:
+            mode = -1
+    return mode
