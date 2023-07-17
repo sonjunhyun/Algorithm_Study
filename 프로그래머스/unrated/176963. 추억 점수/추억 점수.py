@@ -1,3 +1,4 @@
+# 내 풀이
 def solution(name, yearning, photo):
     answer = []
     score_list = dict([(i, j) for i, j in zip(name, yearning)]) # name, yearning 딕셔너리로 변환
