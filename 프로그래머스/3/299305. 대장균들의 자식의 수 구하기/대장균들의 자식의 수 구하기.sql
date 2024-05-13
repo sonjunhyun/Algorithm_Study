@@ -1,0 +1,6 @@
+-- 코드를 작성해주세요
+SELECT A.ID, (SELECT COUNT(*)
+            FROM ECOLI_DATA B
+            WHERE B.PARENT_ID = A.ID) AS CHILD_COUNT
+FROM ECOLI_DATA A
+ORDER BY 1
